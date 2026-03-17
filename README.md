@@ -50,22 +50,22 @@ You have an Azure VM already running, you moved to a new computer, and the origi
 ### 1. Generate a new key
 ```bash
 ./enterprise-ready/generate-ssh-key.sh \
-  --key-path ~/.ssh/azure-ts-router \
+  --key-path ~/.ssh/myVm \
   --comment "azure-router"
 ```
 
 ### 2. Inject the public key into the Azure VM
 ```bash
 ./enterprise-ready/update-azure-vm-ssh-key.sh \
-  --resource-group sbkWusHub \
-  --vm-name sbk-wus-ts-router01 \
+  --resource-group myRg \
+  --vm-name myVm \
   --username azureuser \
-  --public-key ~/.ssh/azure-ts-router.pub
+  --public-key ~/.ssh/myVm.pub
 ```
 
 ### 3. Test access
 ```bash
-ssh -i ~/.ssh/azure-ts-router azureuser@10.10.1.5
+ssh -i ~/.ssh/myVm azureuser@10.10.1.5
 ```
 
 ## Back up your SSH keys
