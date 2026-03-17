@@ -7,8 +7,8 @@
 
 set -euo pipefail
 
-KEY_PATH="${1:-$HOME/.ssh/azure-ts-router}"
-COMMENT="${2:-azure-router}"
+KEY_PATH="${1:-$HOME/.ssh/myVm}"
+COMMENT="${2:-myVm}"
 
 mkdir -p "$(dirname "$KEY_PATH")"
 ssh-keygen -t ed25519 -C "$COMMENT" -f "$KEY_PATH" -N ""
