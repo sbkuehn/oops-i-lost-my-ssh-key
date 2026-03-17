@@ -105,4 +105,4 @@ ssh -i ~/.ssh/myVm azureuser@10.10.1.5
 
 ## License
 
-MIT
+MIT. See [LICENSE](LICENSE).
