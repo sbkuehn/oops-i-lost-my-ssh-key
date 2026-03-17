@@ -7,10 +7,10 @@
 
 set -euo pipefail
 
-RG="${1:-sbkWusHub}"
-VM_NAME="${2:-sbk-wus-ts-router01}"
+RG="${1:-myRg}"
+VM_NAME="${2:-myVm}"
 USERNAME="${3:-azureuser}"
-PUBLIC_KEY="${4:-$HOME/.ssh/azure-ts-router.pub}"
+PUBLIC_KEY="${4:-$HOME/.ssh/myVm.pub}"
 
 az vm user update \
   --resource-group "$RG" \
